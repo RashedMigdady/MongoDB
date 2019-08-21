@@ -2,9 +2,9 @@
 
 Note: Still need to fix the json file
 
-1. Write a MongoDB query to display all the documents in the collection restaurants.
+1. Write a MongoDB query to display all the documents in     the collection restaurants.
 
-2. Write a MongoDB query to display the fields restaurant_id, name, borough and cuisine for all the documents in the collection restaurant.
+2. Write a MongoDB query to display the fields      restaurant_id, name, borough and cuisine for all the documents in the collection restaurant.
 
 3. Write a MongoDB query to display the fields restaurant_id, name, borough and cuisine, but exclude the field \_id for all the documents in the collection restaurant.
 

@@ -24,18 +24,29 @@
 `{"fname" : "Jhon","lname":"williams","class":"A","age" :30, "technologies":["Python","MongoDB"]}`
 
 3.  Write a MongoDB query to update the data of all students by incrementing their ages one year..
-
+db.getCollection('stu').updateMany({} ,{$inc:{quantity: 1}})
 4. Write a MongoDB query to update all the student who has (ADAM) name and make thier classs `A` and thier technolgies `['PHP','mySql']`.
 
-5. Write a MongoDB query to delete one student from class `A` .
+db.getCollection('stu').updateMany({name:"Adam"},{$set:{class:"A" ,technologies : ["mysql","php"] }} )
+
+5. Write a MongoDB query to delete one student from class    `A` .
+
+db.getCollection('stu').deleteOne( {class:"A"})
+
+
 
 6.  Write a MongoDB query to delete All the students from class `C`.
 
-7. Write a MongoDB query to display all the students that thier age less than 20.
+db.getCollection('stu').deleteMany( {class:"C"})
 
-8. Write a MongoDB query to display all the students that thier age greater than 30.
+7. Write a MongoDB query to display all the students that    thier age less than 20.
+db.getCollection('stu').find({age:{$lt:18}} )
 
-9. Write a MongoDB query to get only the students of class `B`.
+8. Write a MongoDB query to display all the students that    thier age greater than 30.
+db.getCollection('stu').find({age:{$gt:20}} )
+
+9. Write a MongoDB query to get only the students of     class `B`.
+db.getCollection('stu').find({class:"B"} )
 
 10.  Sort the faculty details by their age (descending order) and get the details of the first five faculty members only. .
-
+db.getCollection('stu').find().sort( { age: -1 } )
